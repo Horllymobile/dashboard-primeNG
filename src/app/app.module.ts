@@ -23,6 +23,7 @@ import { AppComponent } from './app.component';
 import { AdminComponent } from './layout/admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
+import { EventsComponent } from './events/events.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
     SidemenuComponent,
     AdminComponent,
     LoginComponent,
+    EventsComponent,
   ],imports: [
     BrowserModule,
     BrowserAnimationsModule,
