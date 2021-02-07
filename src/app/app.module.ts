@@ -1,31 +1,46 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
+import {FormsModule} from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
-import { ComponentsModule } from './components/components.module';
+// import { AdminModule } from './layout/admin/admin.module';
+
 // Third party modules
 import {SidebarModule} from 'primeng/sidebar';
+import {InputTextModule} from 'primeng/inputtext';
+import {ButtonModule} from 'primeng/button';
+import {MenubarModule} from 'primeng/menubar';
+import {MenuModule} from 'primeng/menu';
+import {DropdownModule} from 'primeng/dropdown';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+
+// App Modules
+import { HeaderComponent } from './components/header/header.component';
+
 // Components
 import { AppComponent } from './app.component';
-import { AdminComponent } from './views/layout/admin/admin.component';
-import { DashboardComponent } from './views/dashboard/dashboard.component';
-import { LoginComponent } from './views/login/login.component';
+import { AdminComponent } from './layout/admin/admin.component';
+import { LoginComponent } from './login/login.component';
+import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    SidemenuComponent,
     AdminComponent,
-    DashboardComponent,
     LoginComponent,
-  ],
-  imports: [
+  ],imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule,
     AppRoutingModule,
     ButtonModule,
-    ComponentsModule,
-    SidebarModule
+    SidebarModule,
+    MenuModule,
+    MenubarModule,
+    InputTextModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
